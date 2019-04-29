@@ -213,8 +213,8 @@ app.layout = html.Div([
 
 index_page = html.Div([
     html.H1('Moodify App', style = {
-                                    'color':'rgba(61, 148, 255, 0.87)',
-                                    'backgroundColor':'rgba(0, 0, 0, 0.05)',
+                                    'color':'black',
+                                    'backgroundColor':'white',
                                     'text-align':'center'
                         }
                     ),
@@ -226,9 +226,10 @@ index_page = html.Div([
     dcc.Link('Sentiment Analysis For Your Playlists',
              href='/page-2', style = {'font-size': '35px'}),
 
-    html.Div([html.Img(src = '/assets/background_image.png', height = '500', width = '37%',
-                       style={'margin-left':450})])
-    ], style = {'backgroundColor':'rgba(0, 0, 0, 0.9)'})
+    html.Div([html.Img(src = '/assets/background_image.jpg', height = '500', width = '37%',
+                       style={'margin-left':450})]),
+    html.Div([html.H5('Developed by Badal Nabizade - nabizadebadal@gmail.com')], style = {'color':'black','text-align':'center'})
+    ], style = {'backgroundColor':'white', 'heigt':'100%', 'width':'100%'})
 
 page_1_layout = html.Div([
     html.H1('Moodify'),
@@ -304,11 +305,17 @@ def plot_artist_songs(n_clicks, input_data):
 
 
     trace0 = go.Scatter(
-        x=[0.9, 0.1, 0.1, 0.9],
-        y=[0.9, 0.1, 0.9, 0.1],
+        x=[0.92, 0.05, 0.07, 0.92],
+        y=[0.92, 0.05, 0.95, 0.05],
         text=['Happy', 'Sad', 'Angry', 'Relaxed'],
         mode='text',
-        name = 'Categories')
+        name = 'Categories',
+        textfont = dict(
+                        family='Old Standard TT, serif',
+                        size=25,
+                        color= 'rgba(0, 0, 0, 0.70)'
+                                )
+                            )
 
     trace1 = [go.Scatter(x=final_df[final_df['album'] == i]['valence'],
                 y=final_df[final_df['album'] == i]['energy'],
@@ -494,11 +501,17 @@ def plot_songs(n_clicks, dropdown_value, button_yes, input_value):
             ), className=class_choice))
 
     trace0 = go.Scatter(
-        x=[0.9, 0.1, 0.1, 0.9],
-        y=[0.9, 0.1, 0.9, 0.1],
-        text=['Happy', 'Sad', 'Angry', 'Relaxed'],
-        mode='text',
-        name = 'Categories')
+                        x=[0.9, 0.1, 0.1, 0.9],
+                        y=[0.9, 0.1, 0.9, 0.1],
+                        text=['Happy', 'Sad', 'Angry', 'Relaxed'],
+                        mode='text',
+                        name = 'Categories',
+                        textfont = dict(
+                                        family='Old Standard TT, serif',
+                                        size=25,
+                                        color='rgba(0, 0, 0, 0.68)'
+                                                )
+                                            )
 
     trace1 = [go.Scatter(
                 x=user_songs_df[user_songs_df['playlist'] == i]['valence'],
