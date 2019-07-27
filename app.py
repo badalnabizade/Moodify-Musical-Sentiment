@@ -11,18 +11,6 @@ from sklearn.decomposition import PCA
 from sklearn.ensemble import IsolationForest
 
 
-with open('app_token.txt', 'r') as file:
-    tokens = file.read()
-
-token_dict = json.loads(tokens)
-
-client_credentials_manager = \
-            SpotifyClientCredentials(client_id=token_dict['client_id'],
-                                     client_secret=token_dict['client_secret'])
-# Spotify API object
-sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
-
-
 def get_artist(name):
     """
     ----------
@@ -755,4 +743,14 @@ def display_page(pathname):
 
 
 if __name__ == '__main__':
+    with open('app_token.txt', 'r') as file:
+        tokens = file.read()
+
+    token_dict = json.loads(tokens)
+
+    client_credentials_manager = \
+                SpotifyClientCredentials(client_id=token_dict['client_id'],
+                                         client_secret=token_dict['client_secret'])
+    # Spotify API object
+    sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
     app.server.run(debug=True, threaded=True)
