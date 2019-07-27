@@ -4,4 +4,5 @@
 * __Musical sentiment analysis for user given spotify artist.__<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Plots scatter plot of given artist's tracks as shown below.
 ![](screenshots/artist_tracks_plot.png)
-* Musical sentiment analysis for user's spotify playlists. 
+* __Musical sentiment analysis for user's spotify playlists.__<br/>
+![](screenshots/user_tracks_barplots.png)
