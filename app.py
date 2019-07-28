@@ -288,9 +288,30 @@ index_page = html.Div([
     dcc.Link('Sentiment Analysis For Your Playlists',
              href='/page-2', style = {'font-size': '35px'}), # link to plot_songs function.
 
-    html.Div([html.Img(src = '/assets/background_image.jpg', height = '500', width = '37%',
-                       style={'margin-left':450})]),
-    html.Div([html.H5('Developed by Badal Nabizade - nabizadebadal@gmail.com')], style = {'color':'black','text-align':'center'})
+    html.Div([html.Img(src = '/assets/background_image.jpg', height = '500',
+                                    width = '37%', style={'margin-left':450})]),
+    html.Div([html.H5('Developed by Badal Nabizade')],
+                               style = {'color':'black','text-align':'center'}),
+    html.Div([html.Div([html.H5(html.A('Contact',
+                                       href='mailto:nabizadebadal@gmail.com'))],
+                                        style = {'color':'black',
+                                                 'text-align':'center',
+                                                 'position': 'absolute'}),
+        html.Div([html.H5(html.A('Source',
+           href='https://github.com/badalnabizade/Moodify-Musical-Sentiment'))],
+                                        style = {'color':'black',
+                                                 'text-align':'right',
+                                                 'position': 'absolute',
+                                                 'left':'150px'})],
+
+                                                 style={'width': '200px',
+                                                        'heigt':'600px',
+                                                        'position':'absolute',
+                                                        'left':0, 'right':0,
+                                                        'top':830, 'bottom':0,
+                                                        'margin':'auto',
+                                                        'max-width':'100%',
+                                                        'max-height':'100%'})
     ], style = {'backgroundColor':'white', 'heigt':'100%', 'width':'100%'})
 
 page_1_layout = html.Div([
@@ -298,7 +319,8 @@ page_1_layout = html.Div([
     # html.Div(children='''
     #     Symbol to graph:
     # '''),
-    html.Div(dcc.Input(id='input',placeholder='Your favorite Spotify artist', value='', type='text')),
+    html.Div(dcc.Input(id='input',placeholder='Your favorite Spotify artist',
+                        value='', type='text')),
     html.Button('Plot Tracks', id = 'button', className = 'row'),
     html.Div(id='output-graph'),
     html.Div(id='page-1-content'),
@@ -552,14 +574,16 @@ def plot_songs(n_clicks, dropdown_value, button_yes, input_value):
     artist_names = pd.DataFrame({'artist_name':names, 'song_id':ids})
 
     first_df = df.merge(track_titles, left_on='id', right_on='id')
-    first_df.drop(['type', 'key', 'uri', 'track_href', 'analysis_url', 'time_signature', 'mode', 'duration_ms'], 1, inplace=True)
+    first_df.drop(['type', 'key', 'uri', 'track_href', 'analysis_url',
+                    'time_signature', 'mode', 'duration_ms'], 1, inplace=True)
     user_songs_df =first_df.merge(artist_names, left_on='id', right_on='song_id')
 
     user_songs_df = duplicate_dropper(user_songs_df, 'id') # drop duplicate rows.
 
     user_songs_df.drop(['id'],1,inplace=True)
 
-    user_songs_df['mood'] = list(map(mood_detector, user_songs_df['valence'], user_songs_df['energy']))
+    user_songs_df['mood'] = list(map(mood_detector, user_songs_df['valence'],
+                                                       user_songs_df['energy']))
 
     th_df = todays_hot_hits()
     th_df['mood'] = list(map(mood_detector, th_df['valence'], th_df['energy']))
