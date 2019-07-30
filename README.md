@@ -3,6 +3,9 @@
 #### App consists of two section:
 * __Musical sentiment analysis for user given spotify artist.__<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Plots scatter plot of given artist's tracks as shown below.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X axis represents valence value of tracks
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Y axis represents energy value of tracks
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data points in scatter plot colored by belonging album.
 ![](screenshots/artist_tracks_plot.png)
 * __Musical sentiment analysis for user's spotify playlists.__<br/>
 ![](screenshots/user_tracks_barplots.png)
