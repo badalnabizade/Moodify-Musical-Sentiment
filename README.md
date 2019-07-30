@@ -1,6 +1,6 @@
 # Moodify musical sentiment analysis application.
-### Application is online in [here](https://moodify-musical-sentiment.herokuapp.com)
-#### App consists of two section:
+## Application is online in [here](https://moodify-musical-sentiment.herokuapp.com)
+### App consists of two section:
 * __Musical sentiment analysis for user given spotify artist.__<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Plots scatter plot of given artist's tracks as shown below.<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X axis represents valence value of tracks<br/>
@@ -12,7 +12,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X axis of bar plots represents mood of tracks.<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Y axis is represenets value counts of corresponding moods.
 ![](screenshots/user_tracks_barplots.png)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;And plots Two scatter plots.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;And plots two scatter plots.<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First one is scatter plot of user's tracks.<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; X axis is valence. Y axis is energy.<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Explanation for second scatter plot is given in below screenshot (bottom right).<br/>
