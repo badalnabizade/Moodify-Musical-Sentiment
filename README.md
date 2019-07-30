@@ -7,6 +7,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Y axis represents energy value of tracks<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data points in scatter plot colored by belonging album.<br/>
 ![](screenshots/artist_tracks_plot.png)
+<br/>
+<br/>
+<br/>
 * __Musical sentiment analysis for user's spotify playlists.__<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Plots two bar plots. First one is for user's playlist tracks, Second one is for "Today's Hot Hits" playlist tracks <br/> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X axis of bar plots represents mood of tracks.<br/>
