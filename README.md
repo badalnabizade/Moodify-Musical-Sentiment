@@ -10,7 +10,7 @@
 * __Musical sentiment analysis for user's spotify playlists.__<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Plots two bar plots. First one is for user's playlist tracks, Second one is for "Today's Hot Hits" playlist tracks <br/> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X axis of bar plots represents mood of tracks.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Y axis is represenets value counts of corresponding moods.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Y axis is represenets value counts of corresponding moods.<br/><br/>
 ![](screenshots/user_tracks_barplots.png)<br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;And plots two scatter plots.<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First one is scatter plot of user's tracks.<br/>
